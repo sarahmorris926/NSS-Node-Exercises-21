@@ -1,11 +1,18 @@
+ 
 const express = require('express');
-require('dotenv').config();
 const app = express();
-const routes = require('./routes/');
+require('dotenv').config();
+const { printEgg } = require('./egg.js');
 
 // middleware
 
-app.use("/", routes);
+app.get('/', (req, res) => {
+    res.send(`Welcome to Chickens 'n Eggz!`);
+  })
+  
+  app.use('./public/eggs', printEgg);
+  
+  app.use(express.static('/public', { extensions: 'html' }));
 
 // error handling
 app.use((req, res, next) => {
@@ -23,7 +30,7 @@ app.use( (err, req, res, next) => {
     });
 });
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log('Listening on port ', port);
 });
