@@ -1,0 +1,26 @@
+{
+  "name": "NSS-Node-Exercises-21",
+  "version": "1.0.0",
+  "description": "NSS Node.JS Exercises: 21 - Express Middleware and Routing",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarahmorris926/NSS-Node-Exercises-21.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarahmorris926/NSS-Node-Exercises-21/issues"
+  },
+  "homepage": "https://github.com/sarahmorris926/NSS-Node-Exercises-21#readme",
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "sqlite3": "^4.0.0"
+  }
+}
